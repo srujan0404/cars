@@ -1,7 +1,16 @@
+"use Client";
+
 import Image from "next/image";
-import { CustomButton } from ".";
+import { CustomButtonProps } from "@/types";
+import CustomButton from "./CustomButton";
 
 const Hero = () => {
+  
+  const handleScroll = () => {
+
+  }
+
+
   return (
     <div className="hero">
       <div className="flex-1 pt-36 padding-x">
@@ -13,7 +22,11 @@ const Hero = () => {
           easier and faster with our service.
         </p>
 
-        <CustomButton />
+        <CustomButton 
+        title="Explore Now"
+        containerStyles="bg-primary-blue text-white rounded-full mt-10"
+        handleClick={handleScroll}
+        />
       </div>
     </div>
   )
